@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Into the Wild — Hiking Memories</title>
+<meta name="description" content="Moments, trails, and memories from the mountains.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loader / progress / cursor -->
+<div class="loader" id="loader"><svg viewBox="0 0 120 50" aria-hidden="true"><path d="M2 48 L35 12 L52 30 L72 6 L118 48 Z"/></svg><span>Packing the trail mix…</span></div>
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor"></div>
+
+<!-- Floating glass navigation -->
+<nav class="nav" id="nav">
+  <a href="#top" class="brand">HIKING</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  <div class="links" id="links">
+    <a href="#gallery">Memories</a><a href="#trails">Trails</a><a href="#moments">Moments</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="plx"><img data-img="hero" data-speed="0.25" alt="" fetchpriority="high"></div>
+  <div class="hero-text">
+    <small>THE ADVENTURE BEGINS</small>
+    <h1>INTO THE WILD</h1>
+    <p>Moments, trails, and memories from the mountains.</p>
+  </div>
+  <a href="#gallery" class="scroll" aria-label="Scroll down"><span></span></a>
+</header>
+
+<!-- GALLERY INTRO + COLLAGE (filled by script.js from IMAGES.gallery) -->
+<section class="intro" id="gallery">
+  <h2 class="reveal">MEMORIES FROM THE TRAIL</h2>
+  <p class="reveal">Every trail leaves a story. Every summit becomes a memory.</p>
+</section>
+<section class="collage" id="collage"></section>
+
+<!-- FULL-SCREEN MOMENT 1 -->
+<section class="moment"><div class="plx"><img data-img="moment1" data-speed="0.2" alt="" loading="lazy"></div><h2 class="reveal">THE VIEW WAS WORTH THE CLIMB.</h2></section>
+
+<!-- THE TRAIL timeline (filled by script.js from IMAGES.timeline) -->
+<section class="trail" id="trails">
+  <h2 class="reveal">THE TRAIL</h2>
+  <ol class="timeline" id="timeline"></ol>
+</section>
+
+<!-- FULL-SCREEN MOMENT 2 -->
+<section class="moment" id="moments"><div class="plx"><img data-img="moment2" data-speed="0.2" alt="" loading="lazy"></div><h2 class="reveal">ONE STEP AT A TIME.</h2></section>
+
+<!-- KEEP EXPLORING -->
+<section class="moment explore"><div class="plx"><img data-img="explore" data-speed="0.2" alt="" loading="lazy"></div>
+  <div class="reveal"><h2>KEEP EXPLORING</h2><p>THE BEST VIEWS ARE OFTEN AT THE END OF THE TRAIL.</p><a class="btn" href="#gallery">VIEW THE MEMORIES</a></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <h2 class="reveal">UNTIL THE NEXT SUMMIT.</h2>
+  <p>Made for the memories.</p>
+  <svg viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true"><path d="M0 160V110L120 60 200 100 330 20 450 90 560 50 700 120 820 40 950 95 1080 55 1200 100V160Z"/></svg>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" hidden aria-modal="true" role="dialog">
+  <button class="lb-x" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-n prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <figure><img id="lbImg" alt=""><figcaption><b id="lbTitle"></b><span id="lbCount"></span></figcaption></figure>
+  <button class="lb-n next" id="lbNext" aria-label="Next">&#8250;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
